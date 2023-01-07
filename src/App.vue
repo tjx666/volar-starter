@@ -1,31 +1,33 @@
-<template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
-  {{ $t /* $t(key: "hello"): void */ }}
-</template>
-
 <script lang="ts" setup>
-import HelloWorld from './components/HelloWorld.vue'
+import HotTable from "@handsontable/vue";
+
+import "handsontable/dist/handsontable.full.css";
+
+const settings = {
+  data: [
+    ["", "Ford", "Volvo", "Toyota", "Honda"],
+    ["2016", 10, 11, 12, 13],
+    ["2017", 20, 11, 14, 13],
+    ["2018", 30, 15, 12, 13]
+  ],
+  colHeaders: true,
+  rowHeaders: true
+};
 </script>
 
+<template>
+  <div id="hot-preview">
+    <HotTable
+      :settings="settings"
+      license-key="non-commercial-and-evaluation"
+    />
+  </div>
+</template>
+
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+#hot-preview {
+  width: 600px;
+  height: 400px;
+  overflow: hidden;
 }
 </style>
-
-<i18n lang="json">
-{
-  "en": {
-    "hello": "hello world!"
-  },
-  "ja": {
-    "hello": "こんにちは、世界！"
-  }
-}
-</i18n>
