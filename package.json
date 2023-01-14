@@ -7,10 +7,11 @@
     "serve": "vite preview"
   },
   "dependencies": {
-    "vue": "next"
+    "vue": "2.7.14",
+    "vue-demi": "^0.13.11"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "latest",
+    "@vitejs/plugin-vue2": "latest",
     "@volar-plugins/prettyhtml": "latest",
     "@volar/vue-language-core": "latest",
     "@vue/compiler-sfc": "latest",

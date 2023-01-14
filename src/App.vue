@@ -1,7 +1,9 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
-  {{ $t /* $t(key: "hello"): void */ }}
+  <div class="app">
+    <img alt="Vue logo" src="./assets/logo.png" />
+    <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
+    {{ $t /* $t(key: "hello"): void */ }}
+  </div>
 </template>
 
 <script lang="ts" setup>
